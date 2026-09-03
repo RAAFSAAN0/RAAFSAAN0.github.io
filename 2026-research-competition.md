@@ -1,0 +1,7 @@
+---
+title: >-
+    Participated in a Research Competition on Trustworthy AI and Model Reliability
+date: 2026-09-03 18:00:00 +0600
+---
+
+Our team explored early warning signals of model degradation under progressive image corruption, comparing confidence, behavioral instability, and explanation instability to investigate which signal detects reliability issues first.
