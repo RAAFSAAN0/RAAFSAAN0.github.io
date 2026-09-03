@@ -11,8 +11,10 @@ navbar_name: "Rafsan Mahmud"
 # ============================================================
 
 positions:
+  - name: "Graduate Research Assistant, ELITE Research Lab"
+    logo: /assets/images/badges/elite.png
+
   - name: "Computer Science & Engineering"
-  - name: "Researcher in Robust & Trustworthy Deep Learning"
 
 # ============================================================
 # Contact & Profiles
@@ -39,11 +41,11 @@ short_bio_text_justify: false
 
 short_bio: >-
   <p>
-    I am a Computer Science and Engineering graduate with research interests
-    in <strong>robust, explainable, and trustworthy deep learning</strong>,
-    with a particular interest in <strong>computer vision, generative models,
-    anomaly detection, and representation learning</strong>.
+    <strong>Research Interests</strong><br/>
+    Robust and trustworthy deep learning; explainable AI; computer vision;
+    generative models; anomaly detection; and representation learning.
   </p>
+
   <p>
     My research focuses on developing reliable deep learning systems that can
     better detect, explain, and withstand anomalous and adversarial behavior.
@@ -77,7 +79,8 @@ education:
 # ============================================================
 
 # experience:
-#   - name: "ELITE Lab AI"
+#   - name: "ELITE Research Lab"
+#     logo: /assets/images/badges/elite.png
 #     position: "Graduate Research Assistant"
 #     date: "Oct. 2026 - present"
 
