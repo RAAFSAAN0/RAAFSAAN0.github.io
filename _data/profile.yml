@@ -39,7 +39,7 @@ linkedin: "rafsan-mahmud"
 # Short Biography
 # ============================================================
 
-short_bio_text_justify: false
+short_bio_text_justify: true
 
 short_bio: >-
   <p>
