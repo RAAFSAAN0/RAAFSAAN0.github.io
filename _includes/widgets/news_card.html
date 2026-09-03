@@ -2,7 +2,6 @@
 
 <div class="my-3 bg-white shadow-sm rounded-xl">
 
-    <!-- News Header -->
     <h6 class="p-3 mb-0 border-bottom border-gray">
         <i class="fas fa-rss"></i> News
     </h6>
@@ -20,17 +19,17 @@
                 {{ year.name }}
             </div>
 
-            <!-- News Items -->
+            <!-- News -->
             <div class="media-body">
 
                 {% for item in year.items %}
 
                 <div class="my-2">
 
-                    <!-- Title + Date -->
+                    <!-- Title and Date -->
                     <div class="d-flex">
 
-                        <div class="font-weight-normal">
+                        <div>
                             {{ item.title }}
                         </div>
 
@@ -45,7 +44,7 @@
                     <!-- Description -->
                     {% if item.content != empty %}
                     <div class="text-muted mt-1">
-                        {{ item.content | strip_html | truncate: 220 }}
+                        {{ item.content | strip_html }}
                     </div>
                     {% endif %}
 
