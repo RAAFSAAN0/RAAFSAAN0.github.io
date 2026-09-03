@@ -11,7 +11,9 @@ navbar_name: "Rafsan Mahmud"
 # ============================================================
 
 positions:
-  - name: "Graduate Research Assistant, ELITE Research Lab"
+  - name: >-
+      Graduate Research Assistant,
+      <a href="https://elitelab.ai/" target="_blank">ELITE Research Lab</a>
     logo: /assets/images/badges/elite.png
 
   - name: "Computer Science & Engineering"
@@ -78,6 +80,7 @@ education:
 # Research Experience
 # ============================================================
 
+# We will customize the Experience section separately later.
 # experience:
 #   - name: "ELITE Research Lab"
 #     logo: /assets/images/badges/elite.png
