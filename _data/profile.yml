@@ -66,6 +66,7 @@ portrait_caption: >-
 
 education:
   - name: "American International University–Bangladesh (AIUB)"
+    logo: /assets/images/badges/aiub.png
     position: >-
       B.Sc. in Computer Science & Engineering <br/>
       CGPA: 3.98 / 4.00
