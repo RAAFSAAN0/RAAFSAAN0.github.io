@@ -7,7 +7,8 @@ pub: "Manuscript in preparation"
 pub_date: "2025"
 
 authors:
-- Rafsan Mahmud*
+  - Rafsan Mahmud
+  - Akid Mahmud
 
 abstract: >-
   Conducted a comparative study of 3D U-Net, Residual 3D U-Net, and U-Net 3+
@@ -15,7 +16,7 @@ abstract: >-
   and mIoU metrics, with U-Net 3+ achieving the strongest segmentation
   performance among the evaluated architectures.
 
-cover: /assets/images/covers/unet-brain-tumor.jpg
+cover: /assets/images/covers/unet.png
 
 links:
   View Manuscript: "https://github.com/RAAFSAAN0/COMPUTER-VISION-AND-PATTERN-RECOGNITION/blob/main/FINAL/final_assignment_paper.pdf"
