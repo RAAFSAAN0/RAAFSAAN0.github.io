@@ -1,7 +1,1 @@
----
-title: >-
-    Joined ELITE Research Lab as a Graduate Researcher
-date: 2026-10-01 18:00:00 +0600
----
 
-Joined ELITE Research Lab as a Graduate Researcher, where I will work on research in robust and trustworthy deep learning, explainable AI, computer vision, and related areas.
