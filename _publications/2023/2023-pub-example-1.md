@@ -13,6 +13,6 @@ abstract: >-
   a deterministic LatentExplainer and a variational LatentVAE to model deviations
   from the learned latent manifold, evaluated across WGAN-GP and StyleGAN2 using
   MNIST, CIFAR-10, and CelebA under FGSM, PGD, and CW attacks.
-cover: /assets/images/covers/latent-space-anomaly-detection.jpg
+cover: /assets/images/covers/thesis_cover.jpg
 links:
 ---
