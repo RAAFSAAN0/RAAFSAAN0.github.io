@@ -148,7 +148,74 @@ p {
 
 
 /* ============================================================
-   PUBLICATIONS
+   NEWS
+   ============================================================ */
+
+/*
+ * News section is intentionally a little larger
+ * for better readability.
+ */
+
+.news-card {
+    font-size: 16px;
+}
+
+.news-card p {
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.news-card .small {
+    font-size: 15px !important;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   PUBLICATIONS / MANUSCRIPT IN PREPARATION
+   ============================================================ */
+
+/*
+ * Publication titles are slightly larger than normal text.
+ */
+
+.publication-card h5,
+.publication-card .h5 {
+    font-size: 1.22rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/*
+ * Authors and publication information.
+ */
+
+.publication-card p.small {
+    font-size: 15.5px !important;
+    line-height: 1.6;
+}
+
+/*
+ * Manuscript abstract / description.
+ */
+
+.publication-card .text-muted {
+    font-size: 16px !important;
+    line-height: 1.7;
+}
+
+/*
+ * Links such as View Manuscript.
+ */
+
+.publication-card .abstract-links {
+    font-size: 15.5px !important;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   PUBLICATION GENERAL STYLING
    ============================================================ */
 
 .abstract-body {
@@ -156,7 +223,7 @@ p {
 }
 
 .abstract-links {
-    font-size: 15px !important;
+    font-size: 15.5px !important;
     line-height: 1.6;
 }
 
@@ -270,5 +337,19 @@ div.lazy {
 
     .navbar .nav-link {
         font-size: 15px;
+    }
+
+    .news-card,
+    .news-card p {
+        font-size: 15.5px;
+    }
+
+    .publication-card h5,
+    .publication-card .h5 {
+        font-size: 1.12rem;
+    }
+
+    .publication-card .text-muted {
+        font-size: 15.5px !important;
     }
 }
