@@ -1,17 +1,18 @@
 ---
-title:          "Lorem ipsum: Dolor sit amet, consectetur adipiscing elit"
-date:           2023-01-05 00:01:00 +0800
-selected:       true
-pub:            "Nature Communications"
-pub_date:       "2023"
-abstract: >-
-  Cover image is a photo by Thomas Renaud on Unsplash. The abstract of the publication is meant to be a TLDR (very brief summary with 1~2 sentences) of your paper.
-cover:          /assets/images/covers/cover1.jpg
+title: "Latent-Space Anomaly Detection via Explainable AI for Enhancing GAN Robustness"
+date: 2025-08-01 00:01:00 +0600
+selected: true
+pub: "Manuscript in preparation"
+pub_date: ""
 authors:
-- Your Name*
-- Robert White*
-- John Doe
-- Charles Green (Stanford)
+- Rafsan Mahmud*
+- Debajyoti Karmaker
+abstract: >-
+  Developed an explainable anomaly detection framework for identifying adversarial
+  perturbations in GAN latent spaces. Proposed a dual-autoencoder approach combining
+  a deterministic LatentExplainer and a variational LatentVAE to model deviations
+  from the learned latent manifold, evaluated across WGAN-GP and StyleGAN2 using
+  MNIST, CIFAR-10, and CelebA under FGSM, PGD, and CW attacks.
+cover: /assets/images/covers/latent-space-anomaly-detection.jpg
 links:
-  Paper: https://www.cell.com
 ---
