@@ -2,6 +2,8 @@
 layout: blog_post
 title: "Comparative Analysis of U-Net Variants for Brain Tumor Segmentation"
 date: 2025-01-02
+github: "https://github.com/RAAFSAAN0/Brain-Tumor-Segmentation"
+description: "A comparative study of 3D U-Net, Residual 3D U-Net, and U-Net 3+ for brain tumor MRI segmentation using the BraTS20 benchmark."
 tags:
   - TensorFlow
   - PyTorch
@@ -11,32 +13,34 @@ tags:
 
 ## Overview
 
-This project presents a comparative study of different U-Net-based architectures for brain tumor segmentation from MRI scans. The study focuses on evaluating how different architectural improvements affect the segmentation of brain tumor regions.
+This project presents a comparative study of different U-Net-based architectures for brain tumor segmentation from MRI scans. The study focuses on evaluating how distinct architectural modifications and skip connections impact segmentation accuracy across complex tumor sub-regions.
 
 ## Models Evaluated
 
-The following three architectures were implemented and compared:
+The following three architectures were implemented, trained, and benchmarked:
 
-- **3D U-Net**
-- **Residual 3D U-Net**
-- **U-Net 3+**
+- **3D U-Net:** Baseline volumetric convolutional architecture.
+- **Residual 3D U-Net:** Incorporates residual blocks to improve gradient propagation across deeper layers.
+- **U-Net 3+:** Leverages full-scale skip connections and deep supervision to capture multi-scale semantic features.
 
-The models were evaluated using the **BraTS20** brain tumor segmentation dataset.
+All models were evaluated using the **BraTS20** brain tumor segmentation dataset.
 
-## Evaluation
+## Evaluation Metrics
 
-Model performance was evaluated using three commonly used segmentation metrics:
+Model performance was validated using standard volumetric segmentation metrics:
 
-- **Dice Score**
-- **Jaccard Index**
-- **mIoU**
+- **Dice Similarity Coefficient (DSC)**
+- **Jaccard Index (IoU)**
+- **Mean Intersection over Union (mIoU)**
 
-These metrics were used to compare the ability of each architecture to accurately segment tumor regions in brain MRI scans.
+These metrics quantify the overlap and boundary precision between predicted tumor masks and expert ground-truth segmentations.
 
 ## Results
 
-U-Net 3+ achieved the strongest overall segmentation performance among the evaluated architectures. The comparison also showed how architectural improvements to the standard U-Net can affect segmentation quality in medical imaging tasks.
+**U-Net 3+** achieved the strongest overall segmentation performance across all evaluated metrics, particularly on enhancing and core tumor regions. The results demonstrate that full-scale feature aggregation provides substantial precision gains over standard volumetric skip connections in medical image segmentation.
 
 ## Technologies
 
-**TensorFlow** · **PyTorch** · **Medical Imaging** · **BraTS20**
+- **Frameworks:** TensorFlow, PyTorch
+- **Domain:** Medical Image Analysis, Semantic Segmentation
+- **Dataset:** BraTS 2020 Benchmark
