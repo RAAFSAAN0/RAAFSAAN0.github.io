@@ -1,44 +1,49 @@
 {% assign item = include.item %}
 {% assign hide_bottom_border = include.hide_bottom_border %}
-{% assign first = include.first %}
-{% assign last = include.last %}
 
-<div class="border-bottom border-gray p-3 {% if hide_bottom_border %}border-0{% endif %}">
+<div class="p-4 {% unless hide_bottom_border %}border-bottom border-gray{% endunless %}">
     <div class="row">
         <div class="col-12">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="mb-0 font-weight-bold">
+                    <a href="{{ item.url | relative_url }}" class="text-dark text-decoration-none">
+                        {{ item.title }}
+                    </a>
+                </h5>
+                <span class="small text-muted font-weight-normal ml-3 text-nowrap">
+                    {{ item.date | date: "%Y" }}
+                </span>
+            </div>
 
-            <h5 class="mb-2">
-                <a href="{{ item.url | relative_url }}" class="text-dark text-decoration-none">
-                    {{ item.title }}
+            {% if item.tags %}
+            <div class="mb-2">
+                {% for tag in item.tags %}
+                    <span class="badge badge-light border text-secondary font-weight-normal py-1 px-2 mr-1 my-1">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="text-muted small mb-3">
+                {{ item.content }}
+            </div>
+
+            <div class="d-flex align-items-center">
+                {% if item.github %}
+                <a href="{{ item.github }}" target="_blank" rel="noopener noreferrer" class="badge badge-dark py-1 px-2 mr-2 text-white font-weight-normal">
+                    <i class="fab fa-github mr-1"></i> GitHub
                 </a>
-            </h5>
-
-            <div class="text-muted small mb-2">
-                <i class="fas fa-calendar-alt"></i>
-                {{ item.date | date: "%B %d, %Y" }}
-
-                {% if item.tags %}
-                    <span class="ml-3">
-                        <i class="fas fa-tags"></i>
-
-                        {% for tag in item.tags %}
-                            <span class="badge badge-light">{{ tag }}</span>
-                        {% endfor %}
-
-                    </span>
                 {% endif %}
-            </div>
 
-            <div class="text-muted small">
-                {{ item.content | strip_html | truncate: 500 }}
-            </div>
+                {% if item.demo %}
+                <a href="{{ item.demo }}" target="_blank" rel="noopener noreferrer" class="badge badge-primary py-1 px-2 mr-2 text-white font-weight-normal">
+                    <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                </a>
+                {% endif %}
 
-            <div class="mt-2">
-                <a href="{{ item.url | relative_url }}">
-                    Read more <i class="fas fa-angle-double-right"></i>
+                <a href="{{ item.url | relative_url }}" class="small text-primary font-weight-normal ml-auto">
+                    Details <i class="fas fa-angle-right"></i>
                 </a>
             </div>
-
         </div>
     </div>
 </div>
