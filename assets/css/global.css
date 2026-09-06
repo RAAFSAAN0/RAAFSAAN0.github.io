@@ -27,7 +27,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* ============================================================
    HEADINGS
    ============================================================ */
@@ -70,7 +69,6 @@ h6, .h6 {
     font-weight: 600;
 }
 
-
 /* ============================================================
    PARAGRAPHS
    ============================================================ */
@@ -80,7 +78,6 @@ p {
     line-height: 1.68;
     color: #374151;
 }
-
 
 /* ============================================================
    SMALL / SECONDARY TEXT
@@ -94,7 +91,6 @@ p {
 .text-muted {
     color: #64748b !important;
 }
-
 
 /* ============================================================
    PROFILE
@@ -116,7 +112,6 @@ p {
     color: #334155;
 }
 
-
 /* ============================================================
    PROFILE NAME
    ============================================================ */
@@ -128,7 +123,6 @@ p {
     color: #0f172a;
 }
 
-
 /* ============================================================
    NAVIGATION
    ============================================================ */
@@ -137,7 +131,6 @@ p {
     background-color: rgba(255, 255, 255, 0.88) !important;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
@@ -159,20 +152,6 @@ p {
     color: #0f172a !important;
 }
 
-
-/* ============================================================
-   LINKS
-   ============================================================ */
-
-a {
-    transition:
-        color 0.18s ease,
-        opacity 0.18s ease;
-}
-
-a:hover {
-    text-decoration: none;
-}
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-link.active {
     color: #0f172a !important;
@@ -180,7 +159,19 @@ a:hover {
 }
 
 /* ============================================================
-   CARDS
+   LINKS
+   ============================================================ */
+
+a {
+    transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ============================================================
+   CARDS & UTILITIES
    ============================================================ */
 
 .card,
@@ -190,10 +181,17 @@ a:hover {
 
 .card {
     border: 1px solid rgba(0, 0, 0, 0.06) !important;
-
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.025),
         0 8px 24px rgba(0, 0, 0, 0.035) !important;
+}
+
+.shadow-xs {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
 }
 
 .card-img-overlay {
@@ -210,15 +208,9 @@ a:hover {
     border-top-right-radius: 0.9rem !important;
 }
 
-
-/* ============================================================
-   PROFILE CARD
-   ============================================================ */
-
 .card-body {
     color: #2b2f33;
 }
-
 
 /* ============================================================
    PROFILE PHOTO
@@ -231,7 +223,6 @@ a:hover {
     background: #fff;
 }
 
-
 /* ============================================================
    HORIZONTAL RULE
    ============================================================ */
@@ -242,7 +233,6 @@ hr {
     margin-top: 1.5rem;
     margin-bottom: 1.15rem;
 }
-
 
 /* ============================================================
    SECTION HEADERS
@@ -257,7 +247,6 @@ h6.border-bottom {
     color: #1e293b;
 }
 
-
 /* ============================================================
    EDUCATION / EXPERIENCE / AWARDS
    ============================================================ */
@@ -271,7 +260,6 @@ h6.border-bottom {
 .list .small {
     color: #64748b;
 }
-
 
 /* ============================================================
    NEWS
@@ -291,9 +279,13 @@ h6.border-bottom {
     line-height: 1.58;
 }
 
+/* ============================================================
+   TIMELINE SIDEBAR
+   ============================================================ */
 
 #navbar-year .nav-link {
     color: #64748b;
+    font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.15s ease-in-out;
 }
@@ -332,33 +324,6 @@ h6.border-bottom {
     font-size: 14.5px !important;
     line-height: 1.65;
 }
-
-.publication-card .abstract-links {
-    font-size: 14px !important;
-    line-height: 1.55;
-}
-
-
-/* ============================================================
-   PUBLICATION GENERAL STYLING
-   ============================================================ */
-
-.abstract-body {
-    min-height: 100px;
-}
-
-.abstract-links {
-    font-size: 14px !important;
-    line-height: 1.55;
-}
-
-.badge-publication {
-    font-size: 85%;
-    font-weight: 500;
-}
-/* ============================================================
-   PUBLICATION GENERAL STYLING
-   ============================================================ */
 
 .abstract-body {
     min-height: 100px;
@@ -399,14 +364,7 @@ h6.border-bottom {
     max-height: 120px;
 }
 
-img.lazy {
-    background-image: url('images/loading.gif');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50px 50px;
-    min-height: 80px;
-}
-
+img.lazy,
 div.lazy {
     background-image: url('images/loading.gif');
     background-repeat: no-repeat;
@@ -414,7 +372,6 @@ div.lazy {
     background-size: 50px 50px;
     min-height: 80px;
 }
-
 
 /* ============================================================
    EMAIL
@@ -425,7 +382,6 @@ div.lazy {
     font-size: 0.9em;
     letter-spacing: -0.01em;
 }
-
 
 /* ============================================================
    SOCIAL / CONTACT LINKS
@@ -440,7 +396,6 @@ div.lazy {
     margin-right: 2px;
 }
 
-
 /* ============================================================
    BADGES
    ============================================================ */
@@ -451,13 +406,11 @@ div.lazy {
     letter-spacing: -0.01em;
 }
 
-
 /* ============================================================
    RESPONSIVE TYPOGRAPHY
    ============================================================ */
 
 @media (max-width: 768px) {
-
     html {
         font-size: 15.5px;
     }
