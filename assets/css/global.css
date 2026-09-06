@@ -335,7 +335,28 @@ h6.border-bottom {
     font-size: 85%;
     font-weight: 500;
 }
+/* ============================================================
+   PUBLICATION GENERAL STYLING
+   ============================================================ */
 
+.abstract-body {
+    min-height: 100px;
+}
+
+.abstract-links {
+    font-size: 13.8px !important;
+    line-height: 1.55;
+}
+
+.badge-publication {
+    font-size: 85%;
+    font-weight: 600;
+}
+
+.abstract-links .badge-primary:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
 
 /* ============================================================
    IMAGES
