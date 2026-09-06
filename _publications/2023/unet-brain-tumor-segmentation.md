@@ -1,6 +1,6 @@
 ---
 title: "Comparative Analysis of U-Net Variants for Brain Tumor Segmentation"
-date: 2025-08-01 00:02:00 +0600
+date: 2026-08-01 00:02:00 +0600
 selected: true
 
 pub: "Manuscript in preparation"
