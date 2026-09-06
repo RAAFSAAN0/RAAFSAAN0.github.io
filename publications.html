@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Publications
-navbar_title: Publications
+title: Research
+navbar_title: Research
 body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
@@ -10,10 +10,17 @@ body_attr: >-
 
 <div class="row">
     <div class="col-12 col-lg-10">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <h4 class="mb-0 text-dark font-weight-bold">Research &amp; Manuscripts</h4>
+        </div>
+
         {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+        <div class="d-flex align-items-center pt-4 pb-1">
+            <span class="h6 mb-0 text-muted font-weight-bold text-uppercase tracking-wider" id="year-{{ year.name }}">{{ year.name }}</span>
+            <div class="flex-grow-1 border-bottom ml-3" style="opacity: 0.25;"></div>
+        </div>
+
+        <div class="my-3 p-0 bg-white shadow-sm rounded-xl">
             {% for item in year.items %}
                 {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
             {% endfor %}
@@ -23,10 +30,10 @@ body_attr: >-
 
     <div class="col-2 d-none d-lg-block">
         <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            <span class="small font-weight-bold text-muted text-uppercase mb-2 ml-3" style="letter-spacing: 0.05em; font-size: 0.72rem;">Timeline</span>
             {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+            <a class="nav-link d-block py-1 px-3 small rounded-pill mb-1" href="#year-{{ year.name }}">{{ year.name }}</a>
             {% endfor %}
         </div>
     </div>
-
 </div>
