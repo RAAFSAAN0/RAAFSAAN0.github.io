@@ -173,7 +173,11 @@ a {
 a:hover {
     text-decoration: none;
 }
-
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link.active {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
 
 /* ============================================================
    CARDS
