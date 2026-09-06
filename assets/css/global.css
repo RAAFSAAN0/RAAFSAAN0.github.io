@@ -292,6 +292,23 @@ h6.border-bottom {
 }
 
 
+#navbar-year .nav-link {
+    color: #64748b;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+}
+
+#navbar-year .nav-link:hover {
+    color: #0f172a;
+    background-color: #f1f5f9;
+}
+
+#navbar-year .nav-link.active {
+    color: #0f172a !important;
+    background-color: #e2e8f0 !important;
+    font-weight: 600;
+}
+
 /* ============================================================
    PUBLICATIONS / MANUSCRIPTS
    ============================================================ */
