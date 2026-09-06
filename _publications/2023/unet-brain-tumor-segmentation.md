@@ -19,5 +19,7 @@ abstract: >-
 cover: /assets/images/covers/unet.png
 
 links:
-  View Manuscript: "https://github.com/RAAFSAAN0/COMPUTER-VISION-AND-PATTERN-RECOGNITION/blob/main/FINAL/final_assignment_paper.pdf"
+  View Manuscript:
+    url: "https://github.com/RAAFSAAN0/COMPUTER-VISION-AND-PATTERN-RECOGNITION/blob/main/FINAL/final_assignment_paper.pdf"
+    target: "_blank"
 ---
