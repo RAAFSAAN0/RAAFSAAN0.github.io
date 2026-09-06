@@ -5,9 +5,9 @@ pages:
   url: /
 - name: Home (Layout 2)
   url: /index_layout2
-- name: Publications
+- name: Research
   url: /publications
-- name: Blog
+- name: Projects
   url: /blog
 - name: Showcase
   url: /showcase
