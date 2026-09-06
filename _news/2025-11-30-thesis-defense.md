@@ -1,4 +1,3 @@
-
 ---
 title: >-
     Successfully Defended Undergraduate Thesis on Latent-Space Anomaly Detection
