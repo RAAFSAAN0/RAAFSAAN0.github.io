@@ -24,7 +24,11 @@
             {% endif %}
 
             <div class="text-muted small mb-3">
-                {{ item.content }}
+                {% if item.description %}
+                    {{ item.description }}
+                {% else %}
+                    {{ item.excerpt | strip_html | strip_newlines | truncate: 250 }}
+                {% endif %}
             </div>
 
             <div class="d-flex align-items-center">
