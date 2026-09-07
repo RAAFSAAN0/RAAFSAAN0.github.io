@@ -8,7 +8,7 @@ date: 2025-11-30 00:00:00 +0800
   <div class="mb-3">
     {% include widgets/carousel.html 
        id="deans-carousel" 
-       height="380px" 
+       height="320px" 
        images=site.data.display.deans_carousel_data %}
   </div>
   <div class="d-flex justify-content-between align-items-center mb-2">
@@ -17,6 +17,6 @@ date: 2025-11-30 00:00:00 +0800
   </div>
   <h4 class="font-weight-bold mb-2">6× Dean's Honor List Awards</h4>
   <p class="text-secondary mb-0">
-    Recognized on the Dean's Honor List across 6 academic semesters for maintaining outstanding academic performance, leadership, and exemplary GPA standing throughout the Computer Science program.
+    Recognized on the Dean's Honor List across 6 academic semesters for maintaining outstanding academic performance throughout the Computer Science program.
   </p>
 </div>
