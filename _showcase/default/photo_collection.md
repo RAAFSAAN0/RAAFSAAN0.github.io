@@ -2,7 +2,7 @@
 show: true
 width: 5
 date: 2025-12-15 00:00:00 +0800
-height: 330px
+height: 370px
 images:
 - src: assets/images/etc/hackathon.png
   title: Hackathon Team
