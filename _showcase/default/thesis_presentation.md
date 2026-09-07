@@ -8,7 +8,7 @@ date: 2025-09-01 00:00:00 +0800
   <div class="mb-3 flex-grow-1">
     {% include widgets/carousel.html 
        id="thesis-carousel" 
-       height="590px" 
+       height="630px" 
        images=site.data.display.thesis_carousel_data %}
   </div>
   <div>
@@ -17,7 +17,7 @@ date: 2025-09-01 00:00:00 +0800
       <small class="text-muted">Defense & Expo</small>
     </div>
     <h5 class="font-weight-bold mb-2">Undergraduate Thesis Defense & Poster Presentation</h5>
-    <p class="text-secondary mb-0 small">
+    <p class="text-secondary mb-0 small text-justify" style="text-align: justify;">
       Presented core research methodologies and empirical findings during the final undergraduate thesis poster exhibition. Interacted with faculty panel members and peers to demonstrate technical novelty, architecture designs, and benchmark outcomes.
     </p>
   </div>
