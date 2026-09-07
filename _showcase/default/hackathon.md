@@ -5,11 +5,11 @@ date: 2025-10-15 00:00:00 +0800
 ---
 
 <div class="card border-0 shadow-sm rounded-xl overflow-hidden p-3">
-  <div class="mb-3 overflow-hidden rounded-xl bg-light d-flex align-items-center justify-content-center" style="height: 320px;">
+  <div class="mb-3 overflow-hidden rounded-xl bg-light w-100" style="height: 280px;">
     <img src="{{ 'assets/images/etc/hackathon.png' | relative_url }}" 
-         class="img-fluid w-100 h-100" 
+         class="w-100 h-100" 
          alt="Hackathon Team" 
-         style="object-fit: contain;">
+         style="object-fit: cover; object-position: top 20%;">
   </div>
   <div class="d-flex justify-content-between align-items-center mb-2">
     <span class="badge bg-primary text-white px-3 py-1 rounded-pill">Hackathon</span>
