@@ -15,8 +15,4 @@ deans_carousel_data:
 
 thesis_carousel_data:
   - src: assets/images/etc/thesis1.png
-    title: "Thesis Poster Presentation"
-    desc: "Exhibiting research methodology"
   - src: assets/images/etc/thesis2.png
-    title: "Research Team & Faculty"
-    desc: "Poster defense session"
