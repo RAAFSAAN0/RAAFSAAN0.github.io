@@ -1,8 +1,7 @@
 ---
 show: true
 width: 8
-date: 2023-01-01 00:00:00 +0800
-group: Highlights
+date: 2025-09-01 00:00:00 +0800
 ---
 
 <div class="card border-0 shadow-sm rounded-xl overflow-hidden p-3">
