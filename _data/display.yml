@@ -11,11 +11,7 @@ footer_text: >-
 
 deans_carousel_data:
   - src: assets/images/etc/dean1.png
-    title: "Dean's List Certificate"
-    desc: "Academic Excellence Award"
   - src: assets/images/etc/dean2.png
-    title: "Award Ceremony"
-    desc: "Receiving Dean's Honor Mention"
 
 thesis_carousel_data:
   - src: assets/images/etc/thesis1.png
