@@ -1,4 +1,22 @@
 <div>
+    <style>
+        /* Strip dark overlay gradients, masks, and captions */
+        #{{ include.id | slugify }} .carousel-caption,
+        #{{ include.id | slugify }} .lazy::before,
+        #{{ include.id | slugify }} .lazy::after,
+        #{{ include.id | slugify }} .carousel-item::before,
+        #{{ include.id | slugify }} .carousel-item::after {
+            display: none !important;
+            background: none !important;
+            opacity: 0 !important;
+        }
+        #{{ include.id | slugify }} .lazy {
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+        }
+    </style>
+
     <div id="{{ include.id | slugify }}" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for item in include.images %}
@@ -11,12 +29,6 @@
                 {% if item.link %}<a href="{{ item.link }}" target="_blank">{% endif %}
                 <div class="lazy always-load d-block rounded-xl" data-src="{{ item.src | relative_url }}" style="height: {{ include.height }};">
                 </div>
-                {% if item.title or item.desc %}
-                <div class="carousel-caption d-none d-md-block">
-                    {% if item.title %}<h5>{{ item.title }}</h5>{% endif %}
-                    {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
-                </div>
-                {% endif %}
                 {% if item.link %}</a>{% endif %}
             </div>
             {% endfor %}
