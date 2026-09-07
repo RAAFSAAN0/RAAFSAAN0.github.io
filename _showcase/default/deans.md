@@ -16,7 +16,7 @@ date: 2025-11-30 00:00:00 +0800
     <small class="text-muted">6 Times Recipient</small>
   </div>
   <h4 class="font-weight-bold mb-2">6× Dean's Honor List Awards</h4>
-  <p class="text-secondary mb-0">
+  <p class="text-secondary mb-0 text-justify" style="text-align: justify;">
     Recognized on the Dean's Honor List across 6 academic semesters for maintaining outstanding academic performance throughout the Computer Science program.
   </p>
 </div>
