@@ -1,6 +1,6 @@
 ---
 show: true
-width: 4
+width: 5
 date: 2025-12-15 00:00:00 +0800
 height: 250px
 images:
