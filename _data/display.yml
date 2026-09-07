@@ -8,3 +8,19 @@ homepage:
 # if you keep the link to the template so that more people can benefit from it. Thanks!
 footer_text: >-
   <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> academic-homepage</a>
+
+deans_carousel_data:
+  - src: assets/images/etc/dean1.png
+    title: "Dean's List Certificate"
+    desc: "Academic Excellence Award"
+  - src: assets/images/etc/dean2.png
+    title: "Award Ceremony"
+    desc: "Receiving Dean's Honor Mention"
+
+thesis_carousel_data:
+  - src: assets/images/etc/thesis1.png
+    title: "Thesis Poster Presentation"
+    desc: "Exhibiting research methodology"
+  - src: assets/images/etc/thesis2.png
+    title: "Research Team & Faculty"
+    desc: "Poster defense session"
