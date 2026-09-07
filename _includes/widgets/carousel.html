@@ -1,19 +1,23 @@
 <div>
     <style>
-        /* Strip dark overlay gradients, masks, and captions */
+        /* Force image to fill the container completely */
+        #{{ include.id | slugify }} .lazy {
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+        }
+
+        /* Strip all dark overlay gradients, masks, and text captions */
         #{{ include.id | slugify }} .carousel-caption,
         #{{ include.id | slugify }} .lazy::before,
         #{{ include.id | slugify }} .lazy::after,
         #{{ include.id | slugify }} .carousel-item::before,
-        #{{ include.id | slugify }} .carousel-item::after {
+        #{{ include.id | slugify }} .carousel-item::after,
+        #{{ include.id | slugify }} .mask,
+        #{{ include.id | slugify }} .overlay {
             display: none !important;
             background: none !important;
             opacity: 0 !important;
-        }
-        #{{ include.id | slugify }} .lazy {
-            background-size: contain !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
         }
     </style>
 
