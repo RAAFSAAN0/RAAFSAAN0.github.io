@@ -8,7 +8,7 @@ date: 2025-09-01 00:00:00 +0800
   <div class="mb-3 flex-grow-1">
     {% include widgets/carousel.html 
        id="thesis-carousel" 
-       height="620px" 
+       height="610px" 
        images=site.data.display.thesis_carousel_data %}
   </div>
   <div>
