@@ -4,38 +4,6 @@ title: CV
 navbar_title: CV
 ---
 
-<!-- PDF.js Core Library & Styles -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf_viewer.min.css" />
-<script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
-</script>
-
-<style>
-    /* Styling for the PDF page wrapper and clickable annotation layer */
-    .pdf-page-wrapper {
-        position: relative;
-        max-width: 1000px;
-        width: 100%;
-        margin-bottom: 1.5rem;
-    }
-    .pdf-page-wrapper canvas {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .annotationLayer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    .annotationLayer a {
-        cursor: pointer;
-    }
-</style>
-
 <div class="container-lg py-4">
     <!-- Header Controls -->
     <div class="card mb-4 shadow-sm">
@@ -55,75 +23,19 @@ navbar_title: CV
         </div>
     </div>
 
-    <!-- Interactive PDF Display Container -->
-    <div class="card shadow-sm border-0 rounded-lg p-3 bg-white">
-        <div id="pdf-container" class="w-100 d-flex flex-column align-items-center">
-            <div id="loading-spinner" class="py-5 text-center text-muted">
-                <div class="spinner-border spinner-border-sm mr-2" role="status"></div> Loading interactive document...
+    <!-- Native Interactive PDF Container -->
+    <div class="card shadow-sm border-0 rounded-lg overflow-hidden bg-white" style="height: 85vh; min-height: 700px;">
+        <object 
+            data="{{ '/assets/CV.pdf' | relative_url }}" 
+            type="application/pdf" 
+            width="100%" 
+            height="100%">
+            <div class="p-4 text-center">
+                <p class="text-muted">It appears your browser doesn't support embedded PDFs directly.</p>
+                <a href="{{ '/assets/CV.pdf' | relative_url }}" class="btn btn-primary btn-sm" target="_blank">
+                    <i class="fas fa-external-link-alt mr-1"></i> Open CV PDF
+                </a>
             </div>
-        </div>
+        </object>
     </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var url = "{{ '/assets/CV.pdf' | relative_url }}";
-        var container = document.getElementById('pdf-container');
-        var spinner = document.getElementById('loading-spinner');
-
-        pdfjsLib.getDocument(url).promise.then(function(pdf) {
-            if (spinner) spinner.style.display = 'none';
-
-            for (var pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                (function(num) {
-                    pdf.getPage(num).then(function(page) {
-                        var scale = 2.0;
-                        var viewport = page.getViewport({ scale: scale });
-
-                        // Create page wrapper
-                        var wrapper = document.createElement('div');
-                        wrapper.className = 'pdf-page-wrapper shadow-sm rounded overflow-hidden';
-                        container.appendChild(wrapper);
-
-                        // Create Canvas for document rendering
-                        var canvas = document.createElement('canvas');
-                        var context = canvas.getContext('2d');
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
-                        wrapper.appendChild(canvas);
-
-                        // Render Canvas
-                        var renderContext = {
-                            canvasContext: context,
-                            viewport: viewport
-                        };
-
-                        page.render(renderContext).promise.then(function() {
-                            // Render Clickable Links Layer
-                            return page.getAnnotations();
-                        }).then(function(annotations) {
-                            if (annotations.length === 0) return;
-
-                            var annotationLayerDiv = document.createElement('div');
-                            annotationLayerDiv.className = 'annotationLayer';
-                            wrapper.appendChild(annotationLayerDiv);
-
-                            pdfjsLib.AnnotationLayer.render({
-                                viewport: viewport.clone({ dontFlip: true }),
-                                div: annotationLayerDiv,
-                                annotations: annotations,
-                                page: page,
-                                linkService: null,
-                                downloadManager: null
-                            });
-                        });
-                    });
-                })(pageNum);
-            }
-        }).catch(function(error) {
-            if (spinner) {
-                spinner.innerHTML = '<div class="alert alert-warning mb-0">Could not load PDF directly. <a href="' + url + '" target="_blank">Click here to download it</a>.</div>';
-            }
-        });
-    });
-</script>
