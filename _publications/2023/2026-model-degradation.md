@@ -1,4 +1,4 @@
-
+---
 title: "Monitoring Model Degradation Under Progressive Image Corruption: Early-Warning Behavioral Signals and Explanation Instability"
 date: 2026-03-01 00:00:00 +0600
 selected: true
@@ -21,3 +21,4 @@ links:
   View Manuscript:
     url: "https://drive.google.com/file/d/1R8HtH83uMluAxAaiHLqOZMQnsFbZ4mN_/view?usp=sharing"
     target: "_blank"
+---
