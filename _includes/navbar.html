@@ -40,10 +40,11 @@
 <script>
     (function() {
         var savedTheme = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        // Only set to dark if the user explicitly saved 'dark' previously
+        if (savedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         } else {
+            // Default to light mode for all new/incognito visitors
             document.documentElement.setAttribute('data-theme', 'light');
         }
     })();
