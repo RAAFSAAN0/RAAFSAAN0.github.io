@@ -6,10 +6,6 @@ navbar_title: Home (Layout 2)
 
 {% include widgets/profile_card.html %}
 
-{% if site.data.display.homepage.show_research_experience %}
-    {% include widgets/research_experience_card.html %}
-{% endif %}
-
 {% if site.data.display.homepage.show_experience %}
     {% include widgets/experience_card.html %}
 {% endif %}
@@ -19,6 +15,10 @@ navbar_title: Home (Layout 2)
     {% if count_news > 0 %}
         {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
     {% endif %}
+{% endif %}
+
+{% if site.data.display.homepage.show_research_experience %}
+    {% include widgets/research_experience_card.html %}
 {% endif %}
 
 {% if site.data.display.homepage.show_selected_publications %}
