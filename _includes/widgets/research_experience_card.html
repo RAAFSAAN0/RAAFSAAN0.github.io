@@ -1,81 +1,63 @@
-<!-- ============================================================
-     RESEARCH EXPERIENCE CARD
-     ============================================================ -->
-
 <div class="card research-experience-card mb-4">
-
-    <!-- Section Header -->
-    <div class="card-header bg-white border-bottom">
-        <h6 class="mb-0">
-            <i class="fas fa-flask mr-1"></i>
-            Research Experience
-        </h6>
-    </div>
+    <h6 class="p-3 mb-0 border-bottom">
+        <i class="fas fa-flask mr-1"></i> Research Experience
+    </h6>
 
     <div class="card-body">
 
-        <!-- ====================================================
-             ELITE LAB AI
-             ==================================================== -->
-
+        <!-- ============================================================
+             ELITE RESEARCH LAB
+             ============================================================ -->
         <div class="research-entry">
 
             <div class="research-entry-header">
-
-                <div class="research-entry-main">
-
-                    <h5 class="research-position">
-                        Researcher
-                    </h5>
-
-                    <div class="research-institution">
-                        <strong>ELITE Lab AI</strong>
-                    </div>
-
+                <div class="research-position">
+                    Researcher
                 </div>
 
                 <div class="research-date">
                     Aug 2026 – Present
                 </div>
+            </div>
 
+            <div class="research-institution">
+                <img
+                    src="{{ '/assets/images/badges/elite.png' | relative_url }}"
+                    alt="ELITE Research Lab logo"
+                    class="research-institution-logo"
+                >
+
+                <a
+                    href="https://elitelab.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="research-institution-link"
+                >
+                    ELITE Research Lab
+                    <i class="fas fa-external-link-alt research-external-icon"></i>
+                </a>
             </div>
 
             <div class="research-details">
 
                 <div class="research-detail">
-                    <span class="research-label">
-                        Research Focus:
-                    </span>
-                    <span>
-                        [Placeholder for core focus area]
-                    </span>
+                    <span class="research-label">Research Focus:</span>
+                    <span>[Placeholder for core focus area]</span>
                 </div>
 
                 <div class="research-detail">
-                    <span class="research-label">
-                        Research Activities:
-                    </span>
-                    <span>
-                        [Placeholder for methods and pipeline implementation]
-                    </span>
+                    <span class="research-label">Research Activities:</span>
+                    <span>[Placeholder for methods and pipeline implementation]</span>
                 </div>
 
                 <div class="research-detail">
-                    <span class="research-label">
-                        Research Contribution:
-                    </span>
-                    <span>
-                        [Placeholder for key technical innovation]
-                    </span>
+                    <span class="research-label">Research Contribution:</span>
+                    <span>[Placeholder for key technical innovation]</span>
                 </div>
 
                 <div class="research-detail">
-                    <span class="research-label">
-                        Research Outcomes:
-                    </span>
-                    <span>
-                        [Placeholder for results and manuscripts]
-                    </span>
+                    <span class="research-label">Research Outcomes:</span>
+                    <span>[Placeholder for results and manuscripts]</span>
                 </div>
 
             </div>
@@ -83,68 +65,80 @@
         </div>
 
 
-        <!-- ====================================================
-             AIUB UNDERGRADUATE RESEARCHER
-             ==================================================== -->
-
+        <!-- ============================================================
+             AIUB
+             ============================================================ -->
         <div class="research-entry">
 
             <div class="research-entry-header">
-
-                <div class="research-entry-main">
-
-                    <h5 class="research-position">
-                        Undergraduate Researcher
-                    </h5>
-
-                    <div class="research-institution">
-                        <strong>
-                            American International University–Bangladesh (AIUB)
-                        </strong>
-                        <span class="research-location">
-                            · Dhaka, Bangladesh
-                        </span>
-                    </div>
-
+                <div class="research-position">
+                    Undergraduate Researcher
                 </div>
 
                 <div class="research-date">
                     Dec 2024 – Apr 2026
                 </div>
+            </div>
 
+            <div class="research-institution">
+                <img
+                    src="{{ '/assets/images/badges/aiub.png' | relative_url }}"
+                    alt="AIUB logo"
+                    class="research-institution-logo"
+                >
+
+                <a
+                    href="https://www.aiub.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="research-institution-link"
+                >
+                    American International University–Bangladesh (AIUB)
+                    <i class="fas fa-external-link-alt research-external-icon"></i>
+                </a>
+            </div>
+
+            <div class="research-location">
+                Dhaka, Bangladesh
             </div>
 
             <div class="research-project-title">
+                <i class="fas fa-project-diagram mr-1"></i>
                 Latent-Space Anomaly Detection via Explainable AI for Enhancing GAN Robustness
             </div>
 
             <ul class="research-bullets">
 
                 <li>
-                    Developed an explainable anomaly detection framework for identifying
-                    adversarial perturbations in GAN latent spaces.
+                    Developed an explainable anomaly detection framework for
+                    identifying adversarial perturbations in GAN latent spaces.
                 </li>
 
                 <li>
                     Proposed a dual-autoencoder approach combining a deterministic
                     <strong>LatentExplainer</strong> and a variational
-                    <strong>LatentVAE</strong> to model deviations from the learned latent manifold.
+                    <strong>LatentVAE</strong> to model deviations from the learned
+                    latent manifold.
                 </li>
 
                 <li>
                     Investigated the proposed framework across
                     <strong>WGAN-GP</strong> and <strong>StyleGAN2</strong>
-                    architectures using <strong>MNIST, CIFAR-10, and CelebA</strong> datasets.
+                    architectures using <strong>MNIST</strong>,
+                    <strong>CIFAR-10</strong>, and <strong>CelebA</strong>
+                    datasets.
                 </li>
 
                 <li>
                     Evaluated the framework under adversarial attacks including
-                    <strong>FGSM, PGD, and CW</strong>.
+                    <strong>FGSM</strong>, <strong>PGD</strong>, and
+                    <strong>CW</strong>.
                 </li>
 
                 <li>
-                    Investigated latent-space representations and explainability as
-                    mechanisms for detecting adversarial perturbations in generative models.
+                    Investigated latent-space representations and explainability
+                    as mechanisms for detecting adversarial perturbations in
+                    generative models.
                 </li>
 
             </ul>
@@ -152,55 +146,75 @@
         </div>
 
 
-        <!-- ====================================================
+        <!-- ============================================================
              DEEPCHAIN LABS
-             ==================================================== -->
-
-        <div class="research-entry research-entry-last">
+             ============================================================ -->
+        <div class="research-entry">
 
             <div class="research-entry-header">
-
-                <div class="research-entry-main">
-
-                    <h5 class="research-position">
-                        Quality Assurance and R&amp;D Engineer Intern
-                    </h5>
-
-                    <div class="research-institution">
-                        <strong>DeepChain Labs</strong>
-                        <span class="research-location">
-                            · Dhaka, Bangladesh
-                        </span>
-                    </div>
-
+                <div class="research-position">
+                    Quality Assurance and R&amp;D Engineer Intern
                 </div>
 
                 <div class="research-date">
                     Jun 2025 – Oct 2025
                 </div>
+            </div>
 
+            <div class="research-institution">
+                <img
+                    src="{{ '/assets/images/badges/deepchain.png' | relative_url }}"
+                    alt="DeepChain Labs logo"
+                    class="research-institution-logo"
+                >
+
+                <a
+                    href="https://deepchainlabs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="research-institution-link"
+                >
+                    DeepChain Labs
+                    <i class="fas fa-external-link-alt research-external-icon"></i>
+                </a>
+            </div>
+
+            <div class="research-location">
+                Dhaka, Bangladesh
             </div>
 
             <ul class="research-bullets">
 
                 <li>
-                    Performed manual testing of web and mobile applications to identify
-                    functional defects and usability issues.
+                    Investigated software behavior across web and mobile
+                    applications to identify functional inconsistencies,
+                    usability issues, and potential sources of system
+                    degradation.
                 </li>
 
                 <li>
-                    Designed and executed functional and regression test cases across
-                    multiple product modules.
+                    Designed and executed structured functional and regression
+                    testing workflows to systematically evaluate product
+                    modules and validate expected system behavior.
                 </li>
 
                 <li>
-                    Prepared detailed bug reports and collaborated with developers to
-                    facilitate timely resolution.
+                    Analyzed observed failures and documented reproducible
+                    defect patterns, supporting evidence, and potential causes
+                    to facilitate technical investigation and resolution.
                 </li>
 
                 <li>
-                    Documented product requirements, testing workflows, and quality
-                    assurance processes.
+                    Conducted systematic analysis of product requirements,
+                    testing workflows, and quality assurance processes to
+                    identify opportunities for improving reliability and
+                    development practices.
+                </li>
+
+                <li>
+                    Collaborated with developers during iterative investigation
+                    and validation cycles, contributing to evidence-based
+                    debugging and quality improvement.
                 </li>
 
             </ul>
