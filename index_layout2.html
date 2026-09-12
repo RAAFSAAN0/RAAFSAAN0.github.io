@@ -10,6 +10,11 @@ navbar_title: Home (Layout 2)
     {% include widgets/experience_card.html %}
 {% endif %}
 
+
+<!-- ============================================================
+     NEWS
+     ============================================================ -->
+
 {% if site.data.display.homepage.show_news %}
     {% assign count_news = site.news | size %}
     {% if count_news > 0 %}
@@ -17,12 +22,23 @@ navbar_title: Home (Layout 2)
     {% endif %}
 {% endif %}
 
+
+<!-- ============================================================
+     RESEARCH EXPERIENCE
+     ============================================================ -->
+
 {% if site.data.display.homepage.show_research_experience %}
     {% include widgets/research_experience_card.html %}
 {% endif %}
 
+
+<!-- ============================================================
+     MANUSCRIPTS IN PREPARATION
+     ============================================================ -->
+
 {% if site.data.display.homepage.show_selected_publications %}
     {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+
     {% 
         include widgets/publication_card.html 
         publications=pubs
