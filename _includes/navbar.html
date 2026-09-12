@@ -6,7 +6,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto align-items-center">
                 {% for item in site.data.navigation.pages %}
                 {% assign item_url = item.url | relative_url %}
                 {% assign is_active = false %}
@@ -20,12 +20,57 @@
                 {% endif %}
 
                 <li class="nav-item {% if is_active %}active font-weight-bold{% endif %}">
-                    <a class="nav-link {% if is_active %}text-dark font-weight-bold{% endif %}" href="{{ item.url | relative_url }}">
+                    <a class="nav-link {% if is_active %}font-weight-bold{% endif %}" href="{{ item.url | relative_url }}">
                         {{ item.name }}
                     </a>
                 </li>
                 {% endfor %}
+
+                <li class="nav-item ml-sm-2">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                        <i id="theme-toggle-icon" class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script>
+    (function() {
+        var savedTheme = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggleBtn = document.getElementById('theme-toggle');
+        var toggleIcon = document.getElementById('theme-toggle-icon');
+        
+        function updateIcon() {
+            var currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                toggleIcon.className = 'fas fa-sun';
+            } else {
+                toggleIcon.className = 'fas fa-moon';
+            }
+        }
+
+        updateIcon();
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                var currentTheme = document.documentElement.getAttribute('data-theme');
+                var targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', targetTheme);
+                localStorage.setItem('theme', targetTheme);
+                updateIcon();
+            });
+        }
+    });
+</script>
