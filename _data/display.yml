@@ -1,4 +1,5 @@
 homepage:
+  show_research_experience: true
   show_experience: true
   show_news: true
   show_selected_publications: true
