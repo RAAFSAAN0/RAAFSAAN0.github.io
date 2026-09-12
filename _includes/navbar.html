@@ -7,7 +7,7 @@
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto align-items-center">
-                {% for item in site.data.navigation.pages %}
+                {% for item in site.data.navigation %}
                 {% assign item_url = item.url | relative_url %}
                 {% assign is_active = false %}
                 
