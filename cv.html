@@ -4,11 +4,37 @@ title: CV
 navbar_title: CV
 ---
 
-<!-- PDF.js Library -->
+<!-- PDF.js Core Library & Styles -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf_viewer.min.css" />
 <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 </script>
+
+<style>
+    /* Styling for the PDF page wrapper and clickable annotation layer */
+    .pdf-page-wrapper {
+        position: relative;
+        max-width: 1000px;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .pdf-page-wrapper canvas {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .annotationLayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .annotationLayer a {
+        cursor: pointer;
+    }
+</style>
 
 <div class="container-lg py-4">
     <!-- Header Controls -->
@@ -29,11 +55,11 @@ navbar_title: CV
         </div>
     </div>
 
-    <!-- Clean PDF Display Container -->
+    <!-- Interactive PDF Display Container -->
     <div class="card shadow-sm border-0 rounded-lg p-3 bg-white">
         <div id="pdf-container" class="w-100 d-flex flex-column align-items-center">
             <div id="loading-spinner" class="py-5 text-center text-muted">
-                <div class="spinner-border spinner-border-sm mr-2" role="status"></div> Loading document...
+                <div class="spinner-border spinner-border-sm mr-2" role="status"></div> Loading interactive document...
             </div>
         </div>
     </div>
@@ -41,7 +67,6 @@ navbar_title: CV
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Path to your local PDF asset
         var url = "{{ '/assets/CV.pdf' | relative_url }}";
         var container = document.getElementById('pdf-container');
         var spinner = document.getElementById('loading-spinner');
@@ -50,26 +75,50 @@ navbar_title: CV
             if (spinner) spinner.style.display = 'none';
 
             for (var pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                pdf.getPage(pageNum).then(function(page) {
-                    var canvas = document.createElement('canvas');
-                    canvas.className = 'shadow-sm rounded mb-4 w-100';
-                    canvas.style.maxWidth = '1000px';
-                    container.appendChild(canvas);
+                (function(num) {
+                    pdf.getPage(num).then(function(page) {
+                        var scale = 2.0;
+                        var viewport = page.getViewport({ scale: scale });
 
-                    var context = canvas.getContext('2d');
-                    // Scale factor for high DPI / clear render
-                    var scale = 2.0; 
-                    var viewport = page.getViewport({ scale: scale });
+                        // Create page wrapper
+                        var wrapper = document.createElement('div');
+                        wrapper.className = 'pdf-page-wrapper shadow-sm rounded overflow-hidden';
+                        container.appendChild(wrapper);
 
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
+                        // Create Canvas for document rendering
+                        var canvas = document.createElement('canvas');
+                        var context = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+                        wrapper.appendChild(canvas);
 
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext);
-                });
+                        // Render Canvas
+                        var renderContext = {
+                            canvasContext: context,
+                            viewport: viewport
+                        };
+
+                        page.render(renderContext).promise.then(function() {
+                            // Render Clickable Links Layer
+                            return page.getAnnotations();
+                        }).then(function(annotations) {
+                            if (annotations.length === 0) return;
+
+                            var annotationLayerDiv = document.createElement('div');
+                            annotationLayerDiv.className = 'annotationLayer';
+                            wrapper.appendChild(annotationLayerDiv);
+
+                            pdfjsLib.AnnotationLayer.render({
+                                viewport: viewport.clone({ dontFlip: true }),
+                                div: annotationLayerDiv,
+                                annotations: annotations,
+                                page: page,
+                                linkService: null,
+                                downloadManager: null
+                            });
+                        });
+                    });
+                })(pageNum);
             }
         }).catch(function(error) {
             if (spinner) {
