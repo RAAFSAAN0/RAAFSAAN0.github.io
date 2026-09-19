@@ -20,7 +20,6 @@
                         {% endif %}
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col text-center h4">
                         {{ site.data.profile.primary_name }}
@@ -45,16 +44,14 @@
 
                 <div class="row pt-2">
                     <div class="col text-center h4">
-
                         {% if site.data.profile.gscholar %}
                         {%- if site.data.profile.gscholar contains 'scholar.google' -%}
                         {%- assign gscholar_url = site.data.profile.gscholar -%}
                         {%- else -%}
                         {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
                         {%- endif -%}
-
                         <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}">
-                            <i class="ai ai-google-scholar"></i>
+                            <i class="fab fa-google-scholar"></i>
                         </a>
                         {% endif %}
                         
@@ -82,42 +79,35 @@
                         </a>
                         {% endif %}
 
-                        {% if site.data.profile.researchgate %}
-                        <a class="px-1 no-break" target="_blank" href="https://www.researchgate.net/profile/{{ site.data.profile.researchgate }}">
-                            <i class="ai ai-researchgate"></i>
-                        </a>
-                        {% endif %}
-
                         {% if site.data.profile.orcid %}
                         <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
-                            <i class="ai ai-orcid"></i>
+                            <i class="fab fa-orcid"></i>
                         </a>
                         {% endif %}
-
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 
 
-{% if site.data.profile.wechat_qrcode %} 
-<div class="modal fade" id="modal-wechat" tabindex="-1" aria-hidden="true"> 
-    <div class="modal-dialog modal-sm"> 
-        <div class="modal-content"> 
-            <div class="modal-body p-0"> 
-                <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid"> 
-            </div> 
-            {% if site.data.profile.wechat_prompt %} 
-            <div class="modal-body p-1"> 
-                {{ site.data.profile.wechat_prompt }} 
-            </div> 
-            {% endif %} 
-            <div class="modal-footer"> 
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> 
-            </div> 
-        </div> 
-    </div> 
-</div> 
+{% if site.data.profile.wechat_qrcode %}
+<div class="modal fade" id="modal-wechat" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid">
+            </div>
+            {% if site.data.profile.wechat_prompt %}
+            <div class="modal-body p-1">
+                {{ site.data.profile.wechat_prompt }}
+            </div>
+            {% endif %}
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endif %}
