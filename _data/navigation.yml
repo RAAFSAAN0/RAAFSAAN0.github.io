@@ -1,7 +1,7 @@
 # - name: Home
 #   url: /
 - name: Home
-  url: /index_layout2
+  url: /
 - name: Research
   url: /publications
 - name: Projects
