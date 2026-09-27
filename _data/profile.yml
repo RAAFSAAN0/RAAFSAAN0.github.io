@@ -12,7 +12,7 @@ navbar_name: "Rafsan Mahmud"
 
 positions:
   - name: >-
-      Researcher,
+      <strong>Researcher</strong>,
       <a href="https://elitelab.ai/" target="_blank">ELITE Research Lab</a>
     logo: /assets/images/badges/elite.png
 
