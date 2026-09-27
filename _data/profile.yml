@@ -13,7 +13,7 @@ navbar_name: "Rafsan Mahmud"
 positions:
   - name: >-
       <strong>Researcher</strong>,
-      <a href="https://elitelab.ai/" target="_blank">ELITE Research Lab</a>
+      <strong><a href="https://elitelab.ai/" target="_blank">ELITE Research Lab</a></strong>
     logo: /assets/images/badges/elite.png
 
   - name: "<strong class='text-primary'> Seeking Ph.D. positions in CS for Fall 2027 🚀</strong>"
