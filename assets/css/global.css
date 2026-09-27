@@ -780,3 +780,56 @@ div.lazy {
 [data-theme="dark"] .table th {
     border-color: var(--border-color);
 }
+
+
+
+/* ============================================================
+   SHOWCASE — MOBILE RESPONSIVENESS
+   ============================================================ */
+
+@media (max-width: 575.98px) {
+    /* Make every showcase item fill the available mobile width */
+    .grid.grid-item,
+    .grid > .grid-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    /* Keep the grid and its children within the viewport */
+    .grid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .grid > .grid-item {
+        box-sizing: border-box;
+    }
+
+    /* Make showcase cards and their content responsive */
+    .grid-item > .card,
+    .grid-item > div {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .grid-item img,
+    .grid-item video,
+    .grid-item iframe {
+        max-width: 100%;
+    }
+
+    /* Allow long titles and descriptions to wrap */
+    .grid-item h1,
+    .grid-item h2,
+    .grid-item h3,
+    .grid-item h4,
+    .grid-item h5,
+    .grid-item p,
+    .grid-item a {
+        overflow-wrap: anywhere;
+    }
+}
