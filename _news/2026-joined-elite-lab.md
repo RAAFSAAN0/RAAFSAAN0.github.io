@@ -1,6 +1,6 @@
 ---
 title: >-
-    Joined ELITE Research Lab as a Graduate Researcher
+    Joined ELITE Research Lab as a Researcher
 date: 2026-09-01 18:00:00 +0600
 ---
 
